@@ -1,0 +1,46 @@
+# INPUT
+#==================================================================
+
+degs_file: "/Users/amaury/genes/Ctcf_WT_KO.DEGs.filtered_by_Tie2_ATAC.Accesible.promoters.bed"
+
+tads_file: "/Users/amaury/hicToronto/TADs_vs_Loops/bedpes/Ctcf_WT.allReps.896MvP.arrowHead.test100.chr10.bedpe"
+
+output_dir: "/Users/amaury/proyectos_r/metatracks/metatracks_plots"
+
+# MARKS
+#==================================================================
+
+marks_names: "H3K4me1 H3K27ac"
+
+marks_files: "/Users/amaury/toronto_CUTNTag/bigwigs_normalized_by_SF/H3K4me1.Ctcf_WT.trim_Ad_3pb.h2.scaleFact.bw /Users/amaury/toronto_CUTNTag/bigwigs_normalized_by_SF/H3K27ac.Ctcf_WT.ys204_ys240.trim_Ad_3pb.h2.scaleFact.bw"
+
+# CLUSTERS
+#==================================================================
+
+nomen: "Reticulocytes_High Cardiomyocytes"
+
+cluster_sense: "Cardiomyocytes"
+
+# DOMAIN SCALING
+#==================================================================
+
+domain_nbins: 100
+
+# BOUNDARY SCALING
+#==================================================================
+
+boundary_bins_in: 40
+boundary_bins_out: 60
+
+boundary_window_in: 40000
+boundary_window_out: 60000
+
+# GENERAL
+#==================================================================
+
+resol: 1000
+
+plot_width: 8
+plot_height: 5
+
+ncores: 2

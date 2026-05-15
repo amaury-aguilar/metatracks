@@ -1,0 +1,91 @@
+# Folders
+metaplots
+
+# R session files
+.Rhistory
+.RData
+.Ruserdata
+
+# RStudio files
+.Rproj.user/
+*.Rproj
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Logs
+*.log
+
+# Output files
+*.pdf
+*.png
+*.jpeg
+*.jpg
+*.svg
+*.tiff
+
+# Tables and data exports
+*.csv
+*.tsv
+*.xlsx
+*.xls
+
+# Serialized R objects
+*.rds
+*.Rds
+*.rda
+*.Rda
+
+# Compressed files
+*.zip
+*.gz
+*.tar
+*.bz2
+
+# macOS files
+.DS_Store
+
+# Linux files
+*~
+
+# VS Code
+.vscode/
+
+# Quarto / R Markdown cache
+*_cache/
+.cache/
+.quarto/
+
+# knitr / markdown intermediates
+*.utf8.md
+*.knit.md
+
+# Renv
+renv/library/
+renv/staging/
+renv/python/
+
+# Conda environments
+.env/
+.venv/
+
+# Large genomics files
+*.bam
+*.bai
+*.cram
+*.bigWig
+*.bw
+*.hic
+*.cool
+*.mcool
+*.bedGraph
+
+# IGV sessions
+*.xml
+
+# Slurm / cluster outputs
+slurm-*.out
+*.err
+*.out
