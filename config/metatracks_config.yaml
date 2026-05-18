@@ -1,39 +1,94 @@
 # metatracks_config.yaml
-nomen: Monocytes Reticulocytes_Low Reticulocytes_High Endothelial_High Endothelial_Low Cardiomyocytes "Nombre del análisis (sin espacios)"
-cluster_sense: "Endothelial_High Endothelial_Low Cardiomyocytes" . . . . . "The order should be inverse for this clusters. Usually negative lfc"
-plot_select: plot_density . . . . . "Select between: 'plot_heatmaps', 'plot_density' or 'all_plots'"
-density_plot_y: agg_score . . . . . "Values on density plot y axis: 'N', 'agg_score','density'"
-density_plot_width: 12 . . . . . "Values on density plot y axis: 'N', 'agg_score','density'"
-ncores: 1 . . . . . "Clusters for fisher analysis"
-sample: Arrowhead_896MvP_Ctcf_WT . . . . . "Nombre del análisis (sin espacios o entre comillas)"
-tads_dir: "/Users/amaury/hicToronto/TADs_vs_Loops/bedpes/" . . . . . "TADs file"
-tads: Ctcf_WT.allReps.896MvP.arrowHead.5kb.bedpe . . . . . "Archivo de loops (bedpe)"	
-genes_dir: "/Users/amaury/genes/" . . . . . "Genes Path"
-genes_file: "Ctcf_WT_KO.DEGs.filtered_by_Tie2_ATAC.Accesible_Inaccesible.promoters.bed" . . . . . "Genes file"
-genes_ctrl: "active_genes.Tie2_YS.TPMs.2_clusters.promoters.2kb_1kb.bed" . . . . . "Genes file as reference control"
-peaks_cols: "chr start end peak score sense exonstart exonend color" . . . . . "Archivo de loops (bedpe)"	
-aggreagation_stat: "Mean_Score mean" . . . . . "Legend and parameter, for example: Sum_Score sum"
-alpha_level: 1 . . . . . "Transparency of density plots"
-nbins: 50 . . . . . "Bins of redimentional plots"
-boundaries_pb_in: 4000 . . . . . "Bins before the bin boundary"
-boundaries_pb_out: 6000 . . . . . "Bins after the bin boundary"
-cross_boundaries_pb: 6000 . . . . . "pb out the boundaries to plot density profiles"
-outside_boundaries_pb: 10000 . . . . . "pb out the boundaries to plot density profiles"
-resol: 1000 . . . . . "Resolution of the analysis"
-TAD_extend: 0.5 . . . . . "Transparency of density plots"
-distance_To_Nearest_TAD: 400000 . . . . . "Limits the output bed file to deliver DEG related TADs within this window (bp)"
-reference_bed: DEGs . . . . . "Which bed is the reference to the others"
-formato: pdf . . . . . "Image format"
-marks_names: "H3K4me3 H3K27ac_Enh H3K27ac_Super H3K4me1 H3K27me3 H3K27me3_Super Ctcf Rad21" . . . . . "Archivo de loops (bedpe)"
-marks_files_list: "/Users/amaury/toronto_CUTNTag/counts2/H3K4me3.seacr.merged.CPMs.bed /Users/amaury/toronto_CUTNTag/counts_marks_atac_peaks/high_enh.H3K27ac_CPMs.ATACseq.Ctcf_WT.join.Ctcf_KO.seacr.0_120pb.bed /Users/amaury/toronto_CUTNTag/se/rose/beds/H3K27ac.ATACseq.stitched_12.5kb.super.bed /Users/amaury/toronto_CUTNTag/counts2/H3K4me1.seacr.merged.CPMs.bed /Users/amaury/toronto_CUTNTag/counts2/H3K27me3.seacr.merged.CPMs.bed /Users/amaury/toronto_CUTNTag/se/rose/beds/H3K27me3.H3K27me3.stitched_12.5kb.super.bed /Users/amaury/toronto_CUTNTag/counts_marks_atac_peaks/CTCF_CPMs.ATACseq.Ctcf_WT.join.Ctcf_KO.seacr.0_120pb.bed /Users/amaury/toronto_CUTNTag/counts_marks_atac_peaks/RAD21_CPMs.ATACseq.Ctcf_WT.join.Ctcf_KO.seacr.0_120pb.bed" . . . . . "Files of marks in the same order as marks_names"
-peaks_density_limits: ".,.,.,. .,.,.,. .,.,.,. .,.,.,. .,.,.,. .,.,.,. .,.,.,. .,.,.,. .,.,.,." . . . . . "Set limits of score scale (first pair) and y axis scale (second pair)"
-peaks_density_limits_Rnd: ".,.,.,. .,.,.,. .,.,.,. .,.,.,. .,.,.,. .,.,.,. .,.,.,. .,.,.,. .,.,.,." . . . . . "Set limits of score scale (first pair) and y axis scale (second pair)"
-strip_plot_selection: "DEGs H3K4me3 H3K27ac_Enh H3K27me3 Ctcf Rad21" . . . . . "Archivo de loops (bedpe)"
-just_plot: "Reticulocytes_High" . . . . . "Sólo se grafican las muestras listadas"
-segment_overlaps: "farOutside_Up_left,outside_Up_left,inside_UpBoundary,crossing_Up_right,farCrossing_Up_right,farCrossing_Down_left,crossing_Down_left,inside_DownBoundary,outside_Down_right,farOutside_Down_right,upTAD_out,downTAD_out,inside_domain,inside_boundaries,near_boundaries_outTADs,near_boundaries_inTADs,near_boundaries" . . . . . "Filtra las regiones a graficar"
-normalize_by: . . . . . . "Normalize by genes: byGenes; normalize by structural loci: byDomain"
-runMode: - - - - - - "Sólo se grafican las matrices en formato dt de la siguiente línea"
-bins_paths: /Users/amaury/lastHiC_analysis/metaplots/Loops_3925MvP_density_at_anchors/Monocytes /Users/amaury/lastHiC_analysis/metaplots/Loops_3925MvP_density_at_anchors/Reticulocytes_Low /Users/amaury/lastHiC_analysis/metaplots/Loops_3925MvP_density_at_anchors/Reticulocytes_High /Users/amaury/lastHiC_analysis/metaplots/Loops_3925MvP_density_at_anchors/Endothelial_High /Users/amaury/lastHiC_analysis/metaplots/Loops_3925MvP_density_at_anchors/Endothelial_Low /Users/amaury/lastHiC_analysis/metaplots/Loops_3925MvP_density_at_anchors/Cardiomyocytes "Sólo se grafican las matrices en formato dt de la siguiente línea"
-add: just_plots just_plots just_plots just_plots just_plots just_plots "Sólo se grafican las matrices en formato dt de la siguiente línea"
-limits: ".,.,.,950 .,.,.,4000 .,.,.,1200 .,.,.,800 .,.,.,5200 .,.,.,1500 .,.,.,600 .,.,.,2800 .,.,.,3800" . . . . . "Set limits of score scale (first pair) and y axis scale (second pair)"
-limits_Rnd: ".,.,.,950 .,.,.,4000 .,.,.,1200 .,.,.,800 .,.,.,5200 .,.,.,1500 .,.,.,600 .,.,.,2800 .,.,.,3800" . . . . . "Set limits of score scale (first pair) and y axis scale (second pair)"
+
+global:
+
+  output_dir: "/Users/amaury/lastHiC_analysis/metatracks_output_test"
+
+  density_plot_width: 12
+
+  ncores: 1
+
+  aggreagation_stat:
+    label: "Mean_Score"
+    method: "mean"
+
+  alpha_level: 1
+
+  chromosome_prefix_in_bw: "chr"
+
+  dimensions:
+    resol: 5000
+    TAD_extend: 0.5
+    distance_To_Nearest_TAD: 400000
+    nbins: 50
+    in_boundaries_pb_up: 5000
+    in_boundaries_pb_down: 5000
+    near_boundaries_pb_up: 5000
+    near_boundaries_pb_down: 5000
+    out_boundaries_pb_up: 5000
+    out_boundaries_pb_down: 5000
+    anchor_bin_size: 1000
+
+
+  output:
+
+    formato: "pdf"
+    row_height: 0.005
+    base_height: 2.5
+
+  normalize_by: "byDomain"
+
+  reference_bed: "DEGs"
+
+  segment_overlaps:
+    - farOutside_Up_left
+    - outside_Up_left
+    - inside_UpBoundary
+    - crossing_Up_right
+    - farCrossing_Up_right
+    - farCrossing_Down_left
+    - crossing_Down_left
+    - inside_DownBoundary
+    - outside_Down_right
+    - farOutside_Down_right
+    - upTAD_out
+    - downTAD_out
+    - inside_domain
+    - inside_boundaries
+    - near_boundaries_outTADs
+    - near_boundaries_inTADs
+    - near_boundaries
+
+regions:
+  TADs: 
+    - /Users/amaury/hicToronto/TADs_vs_Loops/bedpes/Ctcf_WT.allReps.896MvP.arrowHead.300sample.bedpe
+    - chr1,start1,end1,chr2,start2,end2,id
+  DEGs: 
+    - /Users/amaury/genes/Ctcf_WT_KO.DEGs.filtered_by_Tie2_ATAC.Accesible_Inaccesible.promoters.bed
+    - chr,start,end,id,score,strand,exonstart,exonend,color,accessibility,cluster
+    - cluster #grouping variable, should be the same as the ones in samples 
+  Ctrl: 
+    - /Users/amaury/genes/active_genes.Tie2_YS.TPMs.2_clusters.promoters.2kb_1kb.bed
+    - chr,start,end,id,score,strand,exonstart,exonend,color,exonN,thickStart,thickEnd,cluster
+
+marks:
+  files:
+    H3K4me1: /Users/amaury/toronto_CUTNTag/bigwigs_normalized_by_SF/H3K4me1.Ctcf_WT.trim_Ad_3pb.h2.scaleFact.bw
+    H3K27me3: /Users/amaury/toronto_CUTNTag/bigwigs_normalized_by_SF/H3K27me3.Ctcf_WT.trim_Ad_3pb.h2.scaleFact.bw
+  colors:
+    H3K4me1: yellow4
+    H3K27me3: red3
+
+samples:
+
+  Reticulocytes_Low:
+    cluster_sense: false
+    peaks_density_limits:
+      H3K4me1: [null, null, null, null]
+      H3K27me3: [null, null, null, null]
+      
+  Cardiomyocytes:
+    cluster_sense: true
+    peaks_density_limits:
+      H3K4me1: [null, null, null, null]
+      H3K27me3: [null, null, null, null]
