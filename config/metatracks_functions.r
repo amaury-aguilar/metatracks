@@ -33,6 +33,7 @@ density_f <- function(
   line_color,
   color,
   axis_ls,
+  scale_label,
   ymin = NA,
   ymax = NA) {
   
@@ -44,7 +45,7 @@ density_f <- function(
     high = color,
     limits = c(ymin, ymax),
     oob = scales::squish,
-    name= "Mean"
+    name = scale_label
     )
   # gradient + 
   densityPlot <- ggplot(dt, aes(x = bin)) +
@@ -56,42 +57,6 @@ density_f <- function(
     scale_y_continuous(limits = c(ymin, ymax), expand = c(0, 0))
   
   return(densityPlot)
-}
-
-flip_regions_f <- function(dt, mode=c("TAD","boundary")){
-  
-  mode <- match.arg(mode)
-  
-  if(mode=="TAD"){
-    
-    dt_counts <- dt[, {
-      center <- (regStart[1] + regEnd[1]) / 2
-      peak_center <- (startMark + endMark) / 2
-      
-      .(
-        left  = sum(peak_center < center, na.rm=TRUE),
-        right = sum(peak_center >= center, na.rm=TRUE)
-      )
-      
-    }, by=region]
-    
-  } else if(mode=="boundary"){
-    
-    dt_counts <- dt[, .(
-      left  = sum(inside_UpBoundary  | crossing_Up_right  |
-                    outside_Up_left    | farOutside_Up_left |
-                    farCrossing_Up_right, na.rm=TRUE),
-      
-      right = sum(inside_DownBoundary | crossing_Down_left |
-                    outside_Down_right  | farOutside_Down_right |
-                    farCrossing_Down_left, na.rm=TRUE)
-      
-    ), by=region]
-  }
-  
-  dt_counts[, flip := right > left]
-  
-  return(dt_counts)
 }
 
 graficar_density <- function(plot, mark) {
@@ -133,21 +98,4 @@ graficar_density <- function(plot, mark) {
   device.plot
   print(plot)
   dev.off()
-}
-
-strip_f <- function(lista) {
-  for (name in names(lista)) {
-    plots_density_sel <- lista[[name]][[2]][lista[[name]][[1]]]
-    
-    if (lista[[name]][[3]] == "no_X") {
-      plots_no_x <- head(names(plots_density_sel),
-                         length(names(plots_density_sel)) - 1)
-      for (i in plots_no_x) {
-        plots_density_sel[[i]] <- plots_density_sel[[i]] + remove_x
-      }
-    }
-    plots_density_sel_wraped <-
-    wrap_plots(plots_density_sel, ncol = 1)
-    graficar_density(plots_density_sel_wraped, name)
-  }
 }

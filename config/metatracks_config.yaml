@@ -3,17 +3,14 @@
 global:
 
   output_dir: "/Users/amaury/lastHiC_analysis/metatracks_output_test"
-
   density_plot_width: 12
-
   ncores: 1
 
   aggreagation_stat:
     label: "Mean_Score"
     method: "mean"
-
+    
   alpha_level: 1
-
   chromosome_prefix_in_bw: "chr"
 
   dimensions:
@@ -29,35 +26,10 @@ global:
     out_boundaries_pb_down: 5000
     anchor_bin_size: 1000
 
-
   output:
-
     formato: "pdf"
     row_height: 0.005
     base_height: 2.5
-
-  normalize_by: "byDomain"
-
-  reference_bed: "DEGs"
-
-  segment_overlaps:
-    - farOutside_Up_left
-    - outside_Up_left
-    - inside_UpBoundary
-    - crossing_Up_right
-    - farCrossing_Up_right
-    - farCrossing_Down_left
-    - crossing_Down_left
-    - inside_DownBoundary
-    - outside_Down_right
-    - farOutside_Down_right
-    - upTAD_out
-    - downTAD_out
-    - inside_domain
-    - inside_boundaries
-    - near_boundaries_outTADs
-    - near_boundaries_inTADs
-    - near_boundaries
 
 regions:
   TADs: 
@@ -81,14 +53,32 @@ marks:
 
 samples:
 
-  Reticulocytes_Low:
-    cluster_sense: false
+  Monocytes:
     peaks_density_limits:
       H3K4me1: [null, null, null, null]
       H3K27me3: [null, null, null, null]
-      
+
+  Reticulocytes_Low:
+    peaks_density_limits:
+      H3K4me1: [null, null, null, null]
+      H3K27me3: [null, null, null, null]
+
+  Reticulocytes_High:
+    peaks_density_limits:
+      H3K4me1: [null, null, null, null]
+      H3K27me3: [null, null, null, null]
+
+  Endothelial_High:
+    peaks_density_limits:
+      H3K4me1: [null, null, null, null]
+      H3K27me3: [null, null, null, null]
+
+  Endothelial_Low:
+    peaks_density_limits:
+      H3K4me1: [null, null, null, null]
+      H3K27me3: [null, null, null, null]
+
   Cardiomyocytes:
-    cluster_sense: true
     peaks_density_limits:
       H3K4me1: [null, null, null, null]
       H3K27me3: [null, null, null, null]
